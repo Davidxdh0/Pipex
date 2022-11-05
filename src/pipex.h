@@ -6,7 +6,7 @@
 /*   By: dyeboa <dyeboa@student.codam.nl>             +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/08/23 14:17:00 by dyeboa        #+#    #+#                 */
-/*   Updated: 2022/10/26 11:12:21 by dyeboa        ########   odam.nl         */
+/*   Updated: 2022/11/05 19:19:48 by dyeboa        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ void	parent_process(t_data *data, int *fd, char **envp);
 void	exception_messages(t_data *data, int cmd);
 
 //free.c
-//void	test(t_data *data);
+// void	test(t_data *data);
 void	free_arr(char **arg);
 void	clean_exit(char *message, int errormessage);
 void	perror_exit(int errornumber, char *msg);
@@ -62,5 +62,8 @@ void	input_parse(t_data *data, char **argv, char **envp, int cmd);
 void	relat_path(t_data *data, int cmd);
 void	path_splitter(t_data *data);
 char	*path_split(t_data *data, int cmd);
+
+//exceptions.c
+void	awk(t_data *data, int cmd);
 
 #endif

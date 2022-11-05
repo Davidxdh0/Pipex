@@ -6,7 +6,7 @@
 /*   By: dyeboa <dyeboa@student.codam.nl>             +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/09/27 17:49:56 by dyeboa        #+#    #+#                 */
-/*   Updated: 2022/10/26 11:09:34 by dyeboa        ########   odam.nl         */
+/*   Updated: 2022/11/05 19:18:42 by dyeboa        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,7 +72,9 @@ void	child_process(t_data *data, int *fd, char **envp)
 {
 	int	infile;
 
-	infile = open(data->argv[1], O_RDONLY, 0777);
+	infile = -1;
+	if (ft_strncmp(data->argv[1], "/dev/urandom", 13))
+		infile = open(data->argv[1], O_RDONLY);
 	if (infile == -1)
 		perror_exit(1, data->argv[1]);
 	dup2(fd[1], 1);
@@ -86,7 +88,7 @@ void	parent_process(t_data *data, int *fd, char **envp)
 {
 	int	outfile;
 
-	outfile = open(data->argv[4], O_WRONLY | O_CREAT | O_TRUNC, 0777);
+	outfile = open(data->argv[4], O_WRONLY | O_CREAT | O_TRUNC, 0644);
 	if (outfile == -1)
 		perror_exit(1, data->argv[4]);
 	dup2(fd[0], 0);

@@ -6,7 +6,7 @@
 /*   By: dyeboa <dyeboa@student.codam.nl>             +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/08/23 14:16:14 by dyeboa        #+#    #+#                 */
-/*   Updated: 2022/10/26 11:09:52 by dyeboa        ########   odam.nl         */
+/*   Updated: 2022/11/05 17:52:37 by dyeboa        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ int	main(int argc, char **argv, char **envp)
 	else
 	{
 		ft_putstr_fd("Invalid number of arguments\n", 2);
-		return (1);
+		return (10);
 	}
 	return (0);
 }

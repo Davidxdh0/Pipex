@@ -6,7 +6,7 @@
 /*   By: dyeboa <dyeboa@student.codam.nl>             +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/09/29 14:11:22 by dyeboa        #+#    #+#                 */
-/*   Updated: 2022/10/26 11:10:01 by dyeboa        ########   odam.nl         */
+/*   Updated: 2022/11/05 19:19:38 by dyeboa        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,16 +61,32 @@ void	free_all(t_data *data)
 
 // void	test(t_data *data)
 // {
+// 	int i;
+
+// 	i = 0;
 // 	ft_putstr_fd("argv ", 2);
 // 	ft_putstr_fd(data->argv[0], 2);
 // 	ft_putstr_fd("\ncmd1 ", 2);
-// 	ft_putstr_fd(data->cmd1[0], 2);
-// 	ft_putstr_fd("\ncmd1 ", 2);
-// 	ft_putstr_fd(data->cmd1[1], 2);
-// 	ft_putstr_fd("\ncmd 2 ", 2);
-// 	ft_putstr_fd(data->cmd2[0], 2);
-// 	ft_putstr_fd("\ncmd 2 ", 2);
-// 	ft_putstr_fd(data->cmd2[1], 2);
+// 	while (data->cmd1[i])
+// 	{
+// 		ft_putstr_fd(data->cmd1[i], 2);
+// 		ft_putstr_fd("\ncmd1[i] ", 2);
+// 		i++;
+// 	}
+// 	i = 0;
+// 	while (data->cmd2[i])
+// 	{
+// 		ft_putstr_fd(data->cmd1[i], 2);
+// 		ft_putstr_fd("\ncmd2[i] ", 2);
+// 		i++;
+// 	}
+// 	i = 0;
+// 	while (data->argv[i])
+// 	{
+// 		ft_putstr_fd("\nargv ", 2);
+// 		ft_putstr_fd(data->argv[i], 2);
+// 		i++;
+// 	}
 // 	ft_putstr_fd("\npath ", 2);
 // 	ft_putstr_fd(data->path, 2);
 // 	ft_putstr_fd("\ndata->envps", 2);
